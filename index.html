@@ -1,702 +1,1474 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AASHIRAINTERYOZ | high-end interior design</title>
-  <!-- Font Awesome 6 (free) for icons & clean typography base -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts: elegant serif + clean sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AASHIRAINTERYOZ | high-end interior design</title>
+    <!-- Font Awesome 6 (free) for icons & clean typography base -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: elegant serif + clean sans -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    :root {
-      --charcoal: #2A2A2A;
-      --gold: #C6A45C;
-      --cream: #F5F0E8;
-      --dark-charcoal: #1E1E1E;
-      --light-cream: #FAF7F2;
-      --gold-light: #D8C39C;
-      --text-dark: #2E2E2E;
-      --text-soft: #4A4A4A;
-      --font-serif: 'Playfair Display', serif;
-      --font-sans: 'Inter', sans-serif;
-      --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.05);
-      --shadow-hover: 0 20px 30px -8px rgba(0, 0, 0, 0.12);
-      --transition: all 0.25s ease;
-    }
+        :root {
+            --charcoal: #2A2A2A;
+            --gold: #C6A45C;
+            --cream: #F5F0E8;
+            --dark-charcoal: #1E1E1E;
+            --light-cream: #FAF7F2;
+            --gold-light: #D8C39C;
+            --text-dark: #2E2E2E;
+            --text-soft: #4A4A4A;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 30px -8px rgba(0, 0, 0, 0.12);
+            --transition: all 0.25s ease;
+        }
 
-    body {
-      font-family: var(--font-sans);
-      background-color: var(--cream);
-      color: var(--text-dark);
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
 
-    h1, h2, h3, h4 {
-      font-family: var(--font-serif);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
 
-    h2 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-      position: relative;
-      display: inline-block;
-    }
-    h2:after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 70px;
-      height: 3px;
-      background-color: var(--gold);
-    }
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
 
-    .section-container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 5rem 2rem;
-    }
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 70px;
+            height: 3px;
+            background-color: var(--gold);
+        }
 
-    .sticky-nav {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      background-color: var(--charcoal);
-      color: var(--cream);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      flex-wrap: wrap;
-    }
+        .section-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-      flex-wrap: wrap;
-    }
-    .company-logo  {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #cfc9c0;
-      border: 4px solid var(--gold);
-      object-fit: cover;
-    }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: var(--charcoal);
+            color: var(--cream);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+        }
 
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      color: var(--cream);
-      text-decoration: none;
-      transition: var(--transition);
-      border-bottom: 2px solid transparent;
-      padding-bottom: 3px;
-    }
-    .nav-links a:hover {
-      color: var(--gold-light);
-      border-bottom-color: var(--gold);
-    }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            flex-wrap: wrap;
+        }
 
-    .hero {
-      background: linear-gradient(135deg, var(--charcoal) 0%, #3a3a3a 100%);
-      color: white;
-    }
-    .hero .section-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      padding-top: 4rem;
-      padding-bottom: 6rem;
-    }
-    .hero-content h1 {
-      font-size: 4rem;
-      line-height: 1.1;
-      color: var(--cream);
-      margin-bottom: 1.5rem;
-    }
-    .hero-content h1 i {
-      font-style: normal;
-    }
-    .hero-content p {
-      font-size: 1.2rem;
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 2.5rem;
-      max-width: 90%;
-    }
-    .cta-btn {
-      display: inline-block;
-      background-color: var(--gold);
-      color: var(--charcoal);
-      font-weight: 600;
-      padding: 1rem 2.8rem;
-      text-decoration: none;
-      border-radius: 0px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      transition: var(--transition);
-      border: 2px solid var(--gold);
-    }
-    .cta-btn:hover {
-      background-color: transparent;
-      color: var(--gold);
-    }
-    .hero-image {
-      width: 100%;
-      height: auto;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #cfc9c0;
+            border: 4px solid var(--gold);
+            object-fit: cover;
+        }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2.5rem;
-      margin-top: 3rem;
-    }
-    .service-card {
-      background: var(--light-cream);
-      padding: 2.5rem 2rem;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-      border: 1px solid rgba(198, 164, 92, 0.1);
-      text-align: center;
-    }
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-hover);
-      border-color: var(--gold-light);
-    }
-    .service-card i {
-      font-size: 3rem;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-    }
-    .service-card h3 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
-    .service-card p {
-      color: var(--text-soft);
-    }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            flex-wrap: wrap;
+        }
 
-    /* ===== FIXED GALLERY – proper alignment & responsiveness ===== */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
+        .nav-links a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: var(--transition);
+            border-bottom: 2px solid transparent;
+            padding-bottom: 3px;
+        }
 
-    .project-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-      aspect-ratio: 4 / 3;  /* rectangular, consistent shape */
-      cursor: pointer;
-    }
-    .project-item:hover {
-      transform: scale(1.02);
-      box-shadow: var(--shadow-hover);
-    }
+        .nav-links a:hover {
+            color: var(--gold-light);
+            border-bottom-color: var(--gold);
+        }
 
-    .project-img {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      background: #b8b2a8;
-    }
-    .project-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-    .project-item:hover .project-img img {
-      transform: scale(1.05);
-    }
+        .hero {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #3a3a3a 100%);
+            color: white;
+        }
 
-    /* optional text overlay (if you want to show room type) */
-    .project-img::after {
-      content: attr(data-label);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,0.6));
-      color: white;
-      padding: 1rem;
-      font-weight: 500;
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      text-align: left;
-      pointer-events: none;
-    }
+        .hero .section-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding-top: 4rem;
+            padding-bottom: 6rem;
+        }
 
-    /* Fallback backgrounds removed – using real images via img tag */
-    .why-choose-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      margin: 3rem 0 2rem;
-    }
-    .benefits-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-    .benefit-item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    .benefit-item i {
-      font-size: 2rem;
-      color: var(--gold);
-      min-width: 2.5rem;
-    }
-    .benefit-item h4 {
-      font-size: 1.3rem;
-      margin-bottom: 0.4rem;
-    }
-    .benefit-item p {
-      color: var(--text-soft);
-      font-size: 0.95rem;
-    }
-    .ceo-space {
-      background-color: var(--light-cream);
-      padding: 2rem;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--gold-light);
-      text-align: center;
-    }
-    .ceo-img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 1.5rem;
-      border: 4px solid var(--gold);
-    }
-    .ceo-space h4 {
-      font-size: 1.8rem;
-    }
-    .ceo-space p {
-      color: var(--gold);
-      font-weight: 500;
-    }
+        .hero-content h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+        }
 
-    .media-works {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 4rem 0 2rem;
-    }
-    .media-card {
-      background: var(--light-cream);
-      padding: 2rem 2rem 2.5rem;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid rgba(198,164,92,0.2);
-    }
-    .media-card h3 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .media-card h3 i {
-      color: var(--gold);
-    }
-    .custom-video {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background: #1a1a1a;
-      border: 2px solid var(--gold-light);
-    }
-    .custom-video video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .picture-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .picture-thumb {
-      aspect-ratio: 1 / 1;
-      background: #b0a99b;
-      background-size: cover;
-      background-position: center;
-    }
-    /* keep placeholder thumb backgrounds (SVG generated) */
-    .picture-thumb:nth-child(1) { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%"><rect width="200" height="200" fill="%23a3927f"/><circle cx="100" cy="100" r="50" fill="%23C6A45C" opacity="0.5"/></svg>'); }
-    .picture-thumb:nth-child(2) { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%"><rect width="200" height="200" fill="%23928270"/><polygon points="100,40 160,130 40,130" fill="%23D8C39C" opacity="0.6"/></svg>'); }
-    .picture-thumb:nth-child(3) { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%"><rect width="200" height="200" fill="%23847462"/><rect x="50" y="50" width="100" height="100" fill="%23C6A45C" opacity="0.5"/></svg>'); }
-    .picture-thumb:nth-child(4) { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%"><rect width="200" height="200" fill="%237e6e5b"/><path d="M40,140 L100,60 L160,140 Z" fill="%23F5F0E8" opacity="0.6"/></svg>'); }
+        .hero-content h1 i {
+            font-style: normal;
+        }
 
-    .contact-footer {
-      background-color: var(--dark-charcoal);
-      color: var(--cream);
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 3rem;
-    }
-    .footer-col h4 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-      color: var(--gold);
-    }
-    .footer-col p, .footer-col a {
-      color: #ccc;
-      text-decoration: none;
-      line-height: 2;
-      display: block;
-      transition: var(--transition);
-    }
-    .footer-col a:hover {
-      color: var(--gold);
-      padding-left: 5px;
-    }
-    .social-icons {
-      display: flex;
-      gap: 1.8rem;
-      margin-top: 1.5rem;
-    }
-    .social-icons a {
-      color: var(--cream);
-      font-size: 1.8rem;
-    }
-    .social-icons a:hover {
-      color: var(--gold);
-    }
-    .copyright {
-      text-align: center;
-      padding-top: 3rem;
-      color: #777;
-      font-size: 0.9rem;
-    }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+            max-width: 90%;
+        }
 
-    /* MODAL STYLES */
-    .project-modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-    .modal-content {
-      background: var(--cream);
-      padding: 2rem;
-      max-width: 1000px;
-      width: 90%;
-      max-height: 90vh;
-      overflow-y: auto;
-      position: relative;
-    }
-    .modal-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .modal-gallery img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-    .close-btn {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 2rem;
-      cursor: pointer;
-      color: var(--charcoal);
-    }
-    section {
-      scroll-margin-top: 100px;
-    }
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--charcoal);
+            font-weight: 600;
+            padding: 1rem 2.8rem;
+            text-decoration: none;
+            border-radius: 0px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--gold);
+        }
 
-    /* ===== RESPONSIVE FIXES ===== */
-    @media (max-width: 900px) {
-      h2 { font-size: 2.2rem; }
-      .hero .section-container { grid-template-columns: 1fr; text-align: center; }
-      .hero-content p { margin-left: auto; margin-right: auto; }
-      .hero-content h1 { font-size: 3rem; }
-      .why-choose-grid { grid-template-columns: 1fr; }
-      .media-works { grid-template-columns: 1fr; }
-      .benefits-list { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 700px) {
-      .sticky-nav { flex-direction: column; gap: 0.5rem; text-align: center; }
-      .logo { justify-content: center; font-size: 1.3rem; }
-      .nav-links { justify-content: center; gap: 1rem; }
-      .services-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: 1fr; } /* single column on small */
-    }
+        .cta-btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
 
-    /* additional touch for project-img overlay */
-    .project-img[data-label]::after {
-      content: attr(data-label);
-    }
-  </style>
-</head>
-<body>
-  <!-- Project Modal -->
-  <div id="projectModal" class="project-modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeProject()">&times;</span>
-      <div id="modalGallery" class="modal-gallery"></div>
-    </div>
-  </div>
+        .hero-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
 
-  <nav class="sticky-nav">
-    <div class="logo">
-      <img src="LOGO.jpeg" alt="logo" class="company-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23C6A45C%22 /></svg>'">
-      <span>AASHIRAINTERYOZ</span>
-    </div>
-    <div class="nav-links">
-      <a href="#">HOME</a>
-      <a href="#">SERVICES</a>
-      <a href="#">PROJECTS</a>
-      <a href="#">STUDIO</a>
-      <a href="#Contact">CONTACT</a>
-    </div>
-  </nav>
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
 
-  <section class="hero">
-    <div class="section-container">
-      <div class="hero-content">
-        <h1>Aashira <i>Interyoz</i></h1>
-        <p><h3>"Born of light. Built for Legacy"</h3></p>
-        <a href="#studio" class="cta-btn">DISCOVER STUDIO</a>
-      </div>
-      <div>
-        <img src="int.png" alt="hero interior" class="hero-image" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22 viewBox=%220 0 800 600%22><rect width=%22800%22 height=%22600%22 fill=%22%23333333%22/><text x=%2240%22 y=%22300%22 fill=%22%23C6A45C%22 font-size=%2240%22>Interior vision</text></svg>'">
-      </div>
-    </div>
-  </section>
+        .service-card {
+            background: var(--light-cream);
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(198, 164, 92, 0.1);
+            text-align: center;
+        }
 
-  <section>
-    <div class="section-container">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card"><i class="fas fa-couch"></i><h3>Custom furniture</h3><p>Bespoke pieces made by master artisans.</p></div>
-        <div class="service-card"><i class="fas fa-pencil-ruler"></i><h3>Interior design</h3><p>Full-service spatial design & concept.</p></div>
-        <div class="service-card"><i class="fas fa-lightbulb"></i><h3>Lighting design</h3><p>Atmospheres crafted with light.</p></div>
-      </div>
-    </div>
-  </section>
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--gold-light);
+        }
 
-  <!-- Featured projects: fixed grid & images -->
-  <section>
-    <div class="section-container">
-      <h2>Featured projects</h2>
-      <div class="gallery-grid">
-        <!-- convention hall -->
-        <div class="project-item" onclick="openProject('nomad')">
-          <div class="project-img" data-label="Convention Hall">
-            <img src="convention hall 6.jpeg" alt="Convention hall" onerror="this.src='https://images.unsplash.com/photo-1618220048045-10fe3ab15483?w=600&h=400&fit=crop'">
-          </div>
-        </div>
-        <!-- kitchen -->
-        <div class="project-item" onclick="openProject('soho')">
-          <div class="project-img" data-label="Kitchen">
-            <img src="kitichen 1.jpeg" alt="Kitchen" onerror="this.src='https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&h=400&fit=crop'">
-          </div>
-        </div>
-        <!-- living room -->
-        <div class="project-item" onclick="openProject('tribeca')">
-          <div class="project-img" data-label="Living Room">
-            <img src="living room 1.jpeg" alt="Living-room" onerror="this.src='https://images.unsplash.com/photo-1618219944342-745e233d486c?w=600&h=400&fit=crop'">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        .service-card i {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
 
-  <section>
-    <div class="section-container">
-      <h2>Why choose us</h2>
-      <div class="why-choose-grid">
-        <div class="benefits-list">
-          <div class="benefit-item"><i class="fas fa-medal"></i><div><h4>20+ years</h4><p>Collective expertise in luxury interiors</p></div></div>
-          <div class="benefit-item"><i class="fas fa-gem"></i><div><h4>Artisan network</h4><p>Exclusive collaborations with makers</p></div></div>
-          <div class="benefit-item"><i class="fas fa-clock"></i><div><h4>On time, on budget</h4><p>Stress‑free project management</p></div></div>
-          <div class="benefit-item"><i class="fas fa-leaf"></i><div><h4>Sustainable sourcing</h4><p>Eco‑conscious materials & vintage</p></div></div>
-        </div>
-        <div class="ceo-space">
-          <img src="int.png" alt="Riya Jangid" class="ceo-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22100%22 cy=%22100%22 r=%2290%22 fill=%22%23C6A45C%22 /></svg>'">
-          <h4>Riya Jangid</h4>
-          <p>Founder & creative director</p>
-          <p style="margin-top:1rem; color:var(--text-soft);">"Every space has a soul — we help you find it."</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
 
-  <!-- VIDEO + PICTURE WORKS -->
-  <section>
-    <div class="section-container">
-      <div class="media-works">
-        <div class="media-card">
-          <h3><i class="fas fa-video"></i> Render walkthrough</h3>
-          <div class="custom-video">
-            <video id="showreel-video" controls muted preload="metadata" playsinline>
-              <source src="https://dl.dropboxusercontent.com/scl/fi/lgh93z4mleh6tax03ggye/devrana-siwan-clip.mp4?rlkey=uypqal0ujh3bbe7ge31650g3h&st=zd5hygtg&dl=1" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <p style="margin-top:1rem; color:var(--text-soft);">Preview our latest 3D visuals & material studies. (Video ~400 MB, may take a moment to buffer)</p>
-        </div>
-        <div class="media-card">
-          <h3><i class="fas fa-camera-retro"></i> Realised works</h3>
-          <div class="picture-grid">
-            <div class="picture-thumb" role="img" aria-label="interior work 1"></div>
-            <div class="picture-thumb" role="img" aria-label="interior work 2"></div>
-            <div class="picture-thumb" role="img" aria-label="interior work 3"></div>
-            <div class="picture-thumb" role="img" aria-label="interior work 4"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        .service-card p {
+            color: var(--text-soft);
+        }
 
-  <footer class="contact-footer" id="Contact">
-    <div class="section-container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Aashira Interyoz</h4>
-          <p>High-end interior architecture<br> based in India · Bengaluru</p>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p><i class="fas fa-phone-alt" style="color:var(--gold); margin-right:8px;"></i> +91 7878140264</p>
-          <p><i class="fas fa-envelope" style="color:var(--gold); margin-right:8px;"></i> studio@atelier.design</p>
-          <p>121 Holywell Lane, London EC2</p>
-        </div>
-        <div class="footer-col">
-          <h4>Information</h4>
-          <a href="#">Press</a>
-          <a href="#">Careers</a>
-          <a href="#">Privacy</a>
-        </div>
-        <div class="footer-col">
-          <h4>Follow</h4>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/aashirainteryoz?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw=="><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-pinterest"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>© 2026 AASHIRAINTERYOZ Design — charcoal, gold & cream identity</p>
-      </div>
-    </div>
-  </footer>
+        /* ===== FIXED GALLERY – proper alignment & responsiveness ===== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
 
-  <script>
-    (function() {
-      const video = document.getElementById('showreel-video');
-      if (video) {
-        let userPaused = false;
-        video.addEventListener('pause', () => { userPaused = true; });
-        video.addEventListener('play', () => { userPaused = false; });
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            aspect-ratio: 4 / 3;
+            cursor: pointer;
+        }
 
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              if (!userPaused && video.paused) {
-                video.play().catch(e => console.log('Autoplay blocked:', e));
-              }
-            } else {
-              if (!video.paused) video.pause();
+        .project-item:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background: #b8b2a8;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .project-item:hover .project-img img {
+            transform: scale(1.05);
+        }
+
+        .project-img::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+            color: white;
+            padding: 1rem;
+            font-weight: 500;
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            text-align: left;
+            pointer-events: none;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 3rem 0 2rem;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .benefit-item i {
+            font-size: 2rem;
+            color: var(--gold);
+            min-width: 2.5rem;
+        }
+
+        .benefit-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .benefit-item p {
+            color: var(--text-soft);
+            font-size: 0.95rem;
+        }
+
+        .ceo-space {
+            background-color: var(--light-cream);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gold-light);
+            text-align: center;
+        }
+
+        .ceo-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--gold);
+        }
+
+        .ceo-space h4 {
+            font-size: 1.8rem;
+        }
+
+        .ceo-space p {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .media-works {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 4rem 0 2rem;
+        }
+
+        .media-card {
+            background: var(--light-cream);
+            padding: 2rem 2rem 2.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(198, 164, 92, 0.2);
+        }
+
+        .media-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .media-card h3 i {
+            color: var(--gold);
+        }
+
+        .custom-video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #1a1a1a;
+            border: 2px solid var(--gold-light);
+        }
+
+        .custom-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .picture-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .picture-thumb {
+            aspect-ratio: 1 / 1;
+            background: #b0a99b;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .picture-thumb:nth-child(1) {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%"><rect width="200" height="200" fill="%23a3927f"/><circle cx="100" cy="100" r="50" fill="%23C6A45C" opacity="0.5"/></svg>');
+        }
+
+        .picture-thumb:nth-child(2) {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%"><rect width="200" height="200" fill="%23928270"/><polygon points="100,40 160,130 40,130" fill="%23D8C39C" opacity="0.6"/></svg>');
+        }
+
+        .picture-thumb:nth-child(3) {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%"><rect width="200" height="200" fill="%23847462"/><rect x="50" y="50" width="100" height="100" fill="%23C6A45C" opacity="0.5"/></svg>');
+        }
+
+        .picture-thumb:nth-child(4) {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%"><rect width="200" height="200" fill="%237e6e5b"/><path d="M40,140 L100,60 L160,140 Z" fill="%23F5F0E8" opacity="0.6"/></svg>');
+        }
+
+        .contact-footer {
+            background-color: var(--dark-charcoal);
+            color: var(--cream);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 2;
+            display: block;
+            transition: var(--transition);
+        }
+/* Interactive Services Styles */
+.service-card {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(198, 164, 92, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card i {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover i {
+    transform: scale(1.1);
+}
+
+.service-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gold);
+    color: var(--charcoal);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-badge {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Service Modal Specific */
+.service-modal-content {
+    max-width: 1000px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.service-feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(198, 164, 92, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-feature:hover {
+    transform: translateX(5px);
+    background: rgba(198, 164, 92, 0.1);
+}
+
+.service-feature i {
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+
+.price-tag {
+    display: inline-block;
+    background: var(--charcoal);
+    color: var(--gold);
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+}
+
+.testimonial-card {
+    background: var(--light-cream);
+    padding: 1.5rem;
+    border-left: 4px solid var(--gold);
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+.client-name {
+    color: var(--gold);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.gallery-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.gallery-preview img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-preview img:hover {
+    opacity: 0.8;
+}
+
+.consultation-cta {
+    background: linear-gradient(135deg, var(--charcoal), var(--dark-charcoal));
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.consultation-cta h4 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.consultation-cta .cta-btn {
+    background: transparent;
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+.consultation-cta .cta-btn:hover {
+    background: var(--gold);
+    color: var(--charcoal);
+}
+        .footer-col a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            color: var(--cream);
+            font-size: 1.8rem;
+        }
+
+        .social-icons a:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* MODAL STYLES */
+        .project-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .modal-content {
+            background: var(--cream);
+            padding: 2rem;
+            max-width: 1200px;
+            width: 95%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            border-radius: 8px;
+        }
+
+        .modal-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .modal-gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .modal-gallery img:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: var(--charcoal);
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .close-btn:hover {
+            color: var(--gold);
+            transform: scale(1.1);
+        }
+
+        /* Modal title */
+        .modal-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--gold);
+            display: inline-block;
+        }
+
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        /* ===== RESPONSIVE FIXES ===== */
+        @media (max-width: 900px) {
+            h2 {
+                font-size: 2.2rem;
             }
-          });
-        }, { threshold: 0.5 });
-        observer.observe(video);
-      }
-    })();
 
-    // Project modal with high-res unsplash fallbacks
-    function openProject(project) {
-      const modal = document.getElementById("projectModal");
-      const gallery = document.getElementById("modalGallery");
-      const images = {
-        nomad: [
-          "https://images.unsplash.com/photo-1618221195710-7c2b2f6a6b8a?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1618219904412-915f8f4d6c32?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1618219944342-745e233d486c?w=800&h=600&fit=crop"
-        ],
-        soho: [
-          "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1618220177568-c6b5e8f7d1d4?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1618219904412-915f8f4d6c32?w=800&h=600&fit=crop"
-        ],
-        tribeca: [
-          "https://images.unsplash.com/photo-1618219904412-915f8f4d6c32?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1618220048045-10fe3ab15483?w=800&h=600&fit=crop",
-          "https://images.pexels.com/photos/20291129/pexels-photo-20291129.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "https://images.pexels.com/photos/13369919/pexels-photo-13369919.jpeg?auto=compress&cs=tinysrgb&w=800",
-          "https://images.pexels.com/photos/10412985/pexels-photo-10412985.jpeg?auto=compress&cs=tinysrgb&w=800"
-        ]
-      };
-      const selected = images[project] || images['tribeca'];
-      gallery.innerHTML = selected.map(src => `<img src="${src}" alt="project image" loading="lazy">`).join("");
-      modal.style.display = "flex";
-    }
+            .hero .section-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
 
-    function closeProject() {
-      document.getElementById("projectModal").style.display = "none";
-    }
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
 
-    // close modal if click outside content
-    window.onclick = function(e) {
-      const modal = document.getElementById("projectModal");
-      if (e.target === modal) modal.style.display = "none";
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .media-works {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .modal-gallery img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .sticky-nav {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .logo {
+                justify-content: center;
+                font-size: 1.3rem;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-gallery img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Project Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeProject()">&times;</span>
+            <h3 id="modalTitle" class="modal-title"></h3>
+            <div id="modalGallery" class="modal-gallery"></div>
+        </div>
+    </div>
+
+    <nav class="sticky-nav">
+        <div class="logo">
+            <img src="LOGO.jpeg" alt="logo" class="company-logo"
+                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23C6A45C%22 /></svg>'">
+            <span>AASHIRAINTERYOZ</span>
+        </div>
+        <div class="nav-links">
+            <a href="#">HOME</a>
+            <a href="#SERVICES">SERVICES</a>
+            <a href="#PROJECTS">PROJECTS</a>
+            <a href="#STUDIO">STUDIO</a>
+            <a href="#Contact">CONTACT</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="section-container">
+            <div class="hero-content">
+                <h1>Aashira <i>Interyoz</i></h1>
+                <p>
+                <h3>"Born of light. Built for Legacy"</h3>
+                </p>
+                <a href="#studio" class="cta-btn">DISCOVER STUDIO</a>
+            </div>
+            <div>
+                <img src="int.png" alt="hero interior" class="hero-image"
+                    onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22 viewBox=%220 0 800 600%22><rect width=%22800%22 height=%22600%22 fill=%22%23333333%22/><text x=%2240%22 y=%22300%22 fill=%22%23C6A45C%22 font-size=%2240%22>Interior vision</text></svg>'">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-container">
+            <h2 id="SERVICES">Our Services</h2>
+            <div class="services-grid">
+    <!-- Custom Furniture Card -->
+    <div class="service-card" onclick="openServiceModal('furnitureModal')">
+        <div class="service-badge">BESPOKE</div>
+        <i class="fas fa-couch"></i>
+        <h3>Custom furniture</h3>
+        <p>Bespoke pieces made by master artisans.</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
+            <div style="height: 1px; width: 30px; background: var(--gold);"></div>
+            <span style="color: var(--gold); font-size: 0.8rem;">ARTISAN</span>
+            <div style="height: 1px; width: 30px; background: var(--gold);"></div>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--gold);">Click to explore →</p>
+    </div>
+
+    <!-- Interior Design Card -->
+    <div class="service-card" onclick="openServiceModal('interiorModal')">
+        <div class="service-badge">FULL-SERVICE</div>
+        <i class="fas fa-pencil-ruler"></i>
+        <h3>Interior design</h3>
+        <p>Full-service spatial design & concept.</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
+            <div style="height: 1px; width: 30px; background: var(--gold);"></div>
+            <span style="color: var(--gold); font-size: 0.8rem;">TURNKEY</span>
+            <div style="height: 1px; width: 30px; background: var(--gold);"></div>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--gold);">Click to explore →</p>
+    </div>
+
+    
+    </section>
+
+    <!-- Featured projects: fixed grid & images -->
+    <section>
+        <div id="PROJECTS" class="section-container">
+            <h2>Featured projects</h2>
+            <div class="gallery-grid">
+                <!-- convention hall -->
+                <div class="project-item" onclick="openProject('CONVENTIONAL')">
+                    <div class="project-img" data-label="Convention Hall">
+                        <img src="convention hall 6.jpeg" alt="Convention hall"
+                            onerror="this.src='https://images.unsplash.com/photo-1618220048045-10fe3ab15483?w=600&h=400&fit=crop'">
+                    </div>
+                </div>
+                <!-- kitchen -->
+                <div class="project-item" onclick="openProject('KITCHEN')">
+                    <div class="project-img" data-label="Kitchen">
+                        <img src="kitichen 1.jpeg" alt="Kitchen"
+                            onerror="this.src='https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&h=400&fit=crop'">
+                    </div>
+                </div>
+                <!-- living room -->
+                <div class="project-item" onclick="openProject('LIVING ROOM')">
+                    <div class="project-img" data-label="Living Room">
+                        <img src="living room 1.jpeg" alt="Living-room"
+                            onerror="this.src='https://images.unsplash.com/photo-1618219944342-745e233d486c?w=600&h=400&fit=crop'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-container">
+            <h2>Why choose us</h2>
+            <div class="why-choose-grid">
+                <div class="benefits-list">
+                    <div class="benefit-item"><i class="fas fa-medal"></i>
+                        <div>
+                            <h4>20+ years</h4>
+                            <p>Collective expertise in luxury interiors</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item"><i class="fas fa-gem"></i>
+                        <div>
+                            <h4>Artisan network</h4>
+                            <p>Exclusive collaborations with makers</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item"><i class="fas fa-clock"></i>
+                        <div>
+                            <h4>On time, on budget</h4>
+                            <p>Stress‑free project management</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item"><i class="fas fa-leaf"></i>
+                        <div>
+                            <h4>Sustainable sourcing</h4>
+                            <p>Eco‑conscious materials & vintage</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ceo-space">
+                    <img src="int.png" alt="Riya Jangid" class="ceo-img"
+                        onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22100%22 cy=%22100%22 r=%2290%22 fill=%22%23C6A45C%22 /></svg>'">
+                    <h4>Riya Jangid</h4>
+                    <p>Founder & creative director</p>
+                    <p style="margin-top:1rem; color:var(--text-soft);">"Every space has a soul — we help you find it."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO + PICTURE WORKS -->
+
+    <section>
+        <div id="STUDIO" class="section-container">
+            <div class="media-works">
+                <div class="media-card">
+                    <h3><i class="fas fa-video"></i> Render walkthrough 1</h3>
+                    <div class="custom-video">
+                        <video id="showreel-video-1" class="showreel-video" controls preload="metadata" playsinline>
+                            <source
+                                src="https://dl.dropboxusercontent.com/scl/fi/lgh93z4mleh6tax03ggye/devrana-siwan-clip.mp4?rlkey=uypqal0ujh3bbe7ge31650g3h&st=zd5hygtg&dl=1"
+                                type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p style="margin-top:1rem; color:var(--text-soft);">Preview our latest 3D visuals & material
+                        studies. (Video ~400 MB, may take a moment to buffer)</p>
+                </div>
+
+                <div class="media-card">
+                    <h3><i class="fas fa-video"></i> Render walkthrough 2</h3>
+                    <div class="custom-video">
+                        <video id="showreel-video-2" class="showreel-video" controls preload="metadata" playsinline>
+                            <source
+                                src="https://dl.dropboxusercontent.com/scl/fi/2vm8jql5idw85hb235jw2/marriage-hall-Clip-1.mp4?rlkey=vxm1pl1x2rqoii709bwt4wd4n&st=fgpajq4l&dl=1"
+                                type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p style="margin-top:1rem; color:var(--text-soft);">Marriage hall walkthrough</p>
+                </div>
+
+               <div class="media-card" style="grid-column: span 2; width: 100%; padding: 2rem;">
+    <h3><i class="fas fa-camera-retro"></i> Realised works</h3>
+    
+    <div style="overflow-x: auto; white-space: nowrap; margin-top: 2rem;">
+        <div style="display: inline-flex; gap: 1.5rem;">
+            <!-- Card with video -->
+            <div style="width: 400px; height: 300px; border-radius: 16px; overflow: hidden; position: relative;">
+                <video loop muted autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="https://dl.dropboxusercontent.com/scl/fi/lgh93z4mleh6tax03ggye/devrana-siwan-clip.mp4?rlkey=uypqal0ujh3bbe7ge31650g3h&st=zd5hygtg&dl=1" type="video/mp4">
+                </video>
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, black); padding: 1.5rem;">
+                    <p style="color: white; font-weight: 600;">Devrana Siwan Project</p>
+                </div>
+            </div>
+            
+            <div style="width: 400px; height: 300px; border-radius: 16px; overflow: hidden; position: relative;">
+                <video loop muted autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="https://dl.dropboxusercontent.com/scl/fi/2vm8jql5idw85hb235jw2/marriage-hall-Clip-1.mp4?rlkey=vxm1pl1x2rqoii709bwt4wd4n&st=fgpajq4l&dl=1" type="video/mp4">
+                </video>
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, black); padding: 1.5rem;">
+                    <p style="color: white; font-weight: 600;">Marriage Hall</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- SERVICES MODALS -->
+
+<!-- Custom Furniture Modal -->
+<div id="furnitureModal" class="project-modal">
+    <div class="modal-content service-modal-content">
+        <span class="close-btn" onclick="closeServiceModal('furnitureModal')">&times;</span>
+        
+        <!-- Hero Section -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <div>
+                <h2 class="modal-title" style="border-bottom: none;">Custom Furniture</h2>
+                <p style="font-size: 1.2rem; color: var(--gold); margin: 1rem 0;">Bespoke pieces made by master artisans</p>
+                <p>Each piece is individually crafted in our workshop using time-honored techniques and the finest materials. From concept to completion, we work closely with you to create furniture that tells your story.</p>
+                <div class="price-tag">Starting at ₹50,000 • 8-12 weeks</div>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1618220048045-10fe3ab15483?w=600" alt="Custom furniture" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+        
+        <!-- Features Grid -->
+        <h3 style="margin: 2rem 0 1rem;">What We Offer</h3>
+        <div class="service-grid">
+            <div class="service-feature">
+                <i class="fas fa-tree"></i>
+                <div>
+                    <h4>Premium Materials</h4>
+                    <p>Solid walnut, teak, oak • Italian marble • Brass & bronze</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-hands"></i>
+                <div>
+                    <h4>Hand-Carved Details</h4>
+                    <p>Traditional techniques passed down through generations</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-palette"></i>
+                <div>
+                    <h4>Custom Finishes</h4>
+                    <p>Any color, any stain, any texture you imagine</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-ruler-combined"></i>
+                <div>
+                    <h4>Bespoke Dimensions</h4>
+                    <p>Perfectly fitted to your space</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Gallery Preview -->
+        <h3 style="margin: 2rem 0 1rem;">Recent Creations</h3>
+        <div class="gallery-preview">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400" alt="Sofa">
+            <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=400" alt="Dining table">
+            <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=400" alt="Cabinet">
+            <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=400" alt="Bed">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Chair">
+            <img src="https://images.unsplash.com/photo-1617104551722-3b2d513664dd?w=400" alt="Desk">
+        </div>
+        
+        <!-- Testimonial -->
+        <div class="testimonial-card">
+            <p>"Aashira Interyoz created a custom dining table that is the centerpiece of our home. The craftsmanship is exceptional and it will be passed down for generations."</p>
+            <div class="client-name">— Priya Sharma, Bengaluru</div>
+        </div>
+        
+        <!-- Process -->
+        <h3 style="margin: 2rem 0 1rem;">Our Process</h3>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+            <div><div style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">1</div><p style="margin-top: 0.5rem;"><strong>Consult</strong><br><small>1 hour meeting</small></p></div>
+            <div><div style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">2</div><p style="margin-top: 0.5rem;"><strong>Design</strong><br><small>3D renderings</small></p></div>
+            <div><div style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">3</div><p style="margin-top: 0.5rem;"><strong>Craft</strong><br><small>8-12 weeks</small></p></div>
+            <div><div style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">4</div><p style="margin-top: 0.5rem;"><strong>Deliver</strong><br><small>White glove</small></p></div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="consultation-cta">
+            <h4>Ready to create something beautiful?</h4>
+            <button onclick="openConsultation()" class="cta-btn" style="cursor: pointer;">BOOK FREE CONSULTATION</button>
+        </div>
+    </div>
+</div>
+
+<!-- Interior Design Modal -->
+<div id="interiorModal" class="project-modal">
+    <div class="modal-content service-modal-content">
+        <span class="close-btn" onclick="closeServiceModal('interiorModal')">&times;</span>
+        
+        <!-- Hero Section -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <div>
+                <h2 class="modal-title" style="border-bottom: none;">Interior Design</h2>
+                <p style="font-size: 1.2rem; color: var(--gold); margin: 1rem 0;">Full-service spatial design & concept</p>
+                <p>We transform spaces into experiences. From initial concept to final installation, our team handles every detail to create interiors that reflect your personality and lifestyle.</p>
+                <div class="price-tag">Custom quotes • Residential & Commercial</div>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1618219944342-745e233d486c?w=600" alt="Interior design" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+        
+        <!-- Services List -->
+        <h3 style="margin: 2rem 0 1rem;">Our Design Services</h3>
+        <div class="service-grid">
+            <div class="service-feature">
+                <i class="fas fa-home"></i>
+                <div>
+                    <h4>Residential Design</h4>
+                    <p>Homes, apartments, villas</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-building"></i>
+                <div>
+                    <h4>Commercial Spaces</h4>
+                    <p>Offices, restaurants, hotels</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-draw-polygon"></i>
+                <div>
+                    <h4>Space Planning</h4>
+                    <p>Optimal layout & flow</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-swatchbook"></i>
+                <div>
+                    <h4>Material Selection</h4>
+                    <p>Finishes, fabrics, textures</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-couch"></i>
+                <div>
+                    <h4>Furniture Sourcing</h4>
+                    <p>Custom & curated pieces</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-paint-roller"></i>
+                <div>
+                    <h4>Project Management</h4>
+                    <p>End-to-end execution</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Portfolio Preview -->
+        <h3 style="margin: 2rem 0 1rem;">Recent Projects</h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+            <div><img src="https://images.unsplash.com/photo-1618221195710-5c1a2f6e6c8c?w=400" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;"><p style="margin-top: 0.3rem; font-size: 0.8rem;">Luxury Apartment</p></div>
+            <div><img src="https://images.unsplash.com/photo-1618219904912-fd8716c6a5b6?w=400" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;"><p style="margin-top: 0.3rem; font-size: 0.8rem;">Modern Office</p></div>
+            <div><img src="https://images.unsplash.com/photo-1618221381711-42ca8ab6e908?w=400" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;"><p style="margin-top: 0.3rem; font-size: 0.8rem;">Restaurant</p></div>
+        </div>
+        
+        <!-- Testimonial -->
+        <div class="testimonial-card" style="margin: 2rem 0;">
+            <p>"They understood our vision perfectly and delivered beyond our expectations. Every detail was considered and executed beautifully."</p>
+            <div class="client-name">— Rajesh Mehta, Mumbai</div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="consultation-cta">
+            <h4>Ready to transform your space?</h4>
+            <button onclick="openConsultation()" class="cta-btn" style="cursor: pointer;">SCHEDULE A DESIGN CALL</button>
+        </div>
+    </div>
+</div>
+
+<!-- Lighting Design Modal -->
+<div id="lightingModal" class="project-modal">
+    <div class="modal-content service-modal-content">
+        <span class="close-btn" onclick="closeServiceModal('lightingModal')">&times;</span>
+        
+        <!-- Hero Section -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <div>
+                <h2 class="modal-title" style="border-bottom: none;">Lighting Design</h2>
+                <p style="font-size: 1.2rem; color: var(--gold); margin: 1rem 0;">Atmospheres crafted with light</p>
+                <p>Lighting is the soul of a space. We design layered lighting schemes that transform moods, highlight architecture, and create unforgettable experiences.</p>
+                <div class="price-tag">Consultation based • Commercial & Residential</div>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1586201375761-5f8e9c3e4f9d?w=600" alt="Lighting design" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+        
+        <!-- Services Grid -->
+        <h3 style="margin: 2rem 0 1rem;">Lighting Solutions</h3>
+        <div class="service-grid">
+            <div class="service-feature">
+                <i class="fas fa-sun"></i>
+                <div>
+                    <h4>Natural Light</h4>
+                    <p>Optimizing daylight</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                    <h4>Ambient Lighting</h4>
+                    <p>Overall illumination</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-star"></i>
+                <div>
+                    <h4>Accent Lighting</h4>
+                    <p>Highlighting features</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <i class="fas fa-moon"></i>
+                <div>
+                    <h4>Mood Lighting</h4>
+                    <p>Smart & dimmable systems</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonial -->
+        <div class="testimonial-card">
+            <p>"The lighting design completely transformed our gallery space. Art pieces come alive and the ambiance is perfect."</p>
+            <div class="client-name">— Art Gallery, Delhi</div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="consultation-cta">
+            <h4>Let there be light (the right kind)</h4>
+            <button onclick="openConsultation()" class="cta-btn" style="cursor: pointer;">LIGHTING CONSULTATION</button>
+        </div>
+    </div>
+</div>
+
+<!-- Consultation Form Modal (reused from earlier) -->
+<div id="consultationModal" class="project-modal">
+    <div class="modal-content" style="max-width: 600px;">
+        <span class="close-btn" onclick="closeConsultationModal()">&times;</span>
+        <h2 class="modal-title">Book Your Consultation</h2>
+        <p style="margin-bottom: 2rem;">Free 30-minute consultation with our design team.</p>
+        
+        <form id="consultationForm" onsubmit="event.preventDefault(); submitConsultationForm();">
+            <div style="margin-bottom: 1rem;">
+                <input type="text" placeholder="Your Name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <input type="email" placeholder="Email Address" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <input type="tel" placeholder="Phone Number" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <select style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
+                    <option>I'm interested in...</option>
+                    <option>Custom Furniture</option>
+                    <option>Interior Design</option>
+                    <option>Lighting Design</option>
+                    <option>Multiple Services</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <textarea placeholder="Tell us about your project" rows="3" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;"></textarea>
+            </div>
+            <button type="submit" class="cta-btn" style="width: 100%; border: none; cursor: pointer;">REQUEST CALLBACK</button>
+        </form>
+    </div>
+</div>
+    <footer class="contact-footer" id="Contact">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Aashira Interyoz</h4>
+                    <p>High-end interior architecture<br> based in India · Bengaluru</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone-alt" style="color:var(--gold); margin-right:8px;"></i> +91 7878140264</p>
+                    <p><i class="fas fa-envelope" style="color:var(--gold); margin-right:8px;"></i>
+                        studio@atelier.design</p>
+                    <p>121 Holywell Lane, London EC2</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <a href="#">Press</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Privacy</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <div class="social-icons">
+                        <a
+                            href="https://www.instagram.com/aashirainteryoz?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw=="><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 AASHIRAINTERYOZ Design — charcoal, gold & cream identity</p>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script>
+        (function () {
+            // Handle all videos with class 'showreel-video'
+            const videos = document.querySelectorAll('.showreel-video');
+
+            videos.forEach(video => {
+                let userPaused = false;
+
+                video.addEventListener('pause', () => { userPaused = true; });
+                video.addEventListener('play', () => { userPaused = false; });
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (!userPaused && video.paused) {
+                                video.play().catch(e => console.log('Autoplay blocked:', e));
+                            }
+                        } else {
+                            if (!video.paused) video.pause();
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                observer.observe(video);
+            });
+        })();
+
+        // Project images database - Add your local images here
+        const projectImages = {
+            CONVENTIONAL: [
+                "convention hall 6.jpeg",
+                "convention hall 2.jpeg",  // Add more convention hall images
+                "convention hall 3.jpeg",
+                "convention hall 4.jpeg",
+                "convention hall 5.jpeg",
+                "convention hall 7.jpeg",
+                "convention hall 8.jpeg",
+                "convention hall 9.jpeg",
+                "convention hall 10.jpeg",
+
+
+            ],
+            KITCHEN: [
+                "kitichen 1.jpeg",
+                "kitchen 2.jpeg",  // Add more kitchen images
+                "kitchen 3.jpeg",
+
+
+            ],
+            'LIVING ROOM': [
+                "LIVING ROOM 5.jpeg",
+                "living room 1.jpeg",
+                "living room 4.jpeg",  // Add more living room images
+                "living room 3.jpeg",
+                "https://images.pexels.com/photos/20291129/pexels-photo-20291129.jpeg?auto=compress&cs=tinysrgb&w=800",
+                "https://images.pexels.com/photos/13369919/pexels-photo-13369919.jpeg?auto=compress&cs=tinysrgb&w=800"
+            ]
+        };
+
+        // Function to open project modal with images
+        function openProject(project) {
+            const modal = document.getElementById("projectModal");
+            const gallery = document.getElementById("modalGallery");
+            const modalTitle = document.getElementById("modalTitle");
+
+            // Set modal title
+            modalTitle.textContent = project.charAt(0) + project.slice(1).toLowerCase() + " Gallery";
+
+            // Get images for the selected project
+            const selectedImages = projectImages[project] || [];
+
+            if (selectedImages.length === 0) {
+                gallery.innerHTML = '<p style="text-align: center; color: var(--text-soft);">No images available for this project.</p>';
+            } else {
+                // Create image gallery HTML
+                gallery.innerHTML = selectedImages.map(src => {
+                    // Check if it's a local file or URL
+                    const isLocalFile = !src.startsWith('http');
+                    return `<img src="${src}" alt="${project} project image" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1618219944342-745e233d486c?w=800&h=600&fit=crop'">`;
+                }).join("");
+            }
+
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Prevent background scrolling
+        }
+
+        function closeProject() {
+            const modal = document.getElementById("projectModal");
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Restore scrolling
+
+            // Clear gallery to prevent memory issues
+            setTimeout(() => {
+                const gallery = document.getElementById("modalGallery");
+                if (modal.style.display === "none") {
+                    gallery.innerHTML = '';
+                }
+            }, 300);
+        }
+
+        // Close modal if click outside content
+        window.onclick = function (e) {
+            const modal = document.getElementById("projectModal");
+            if (e.target === modal) {
+                closeProject();
+            }
+        }
+
+        // Add keyboard support (ESC key to close modal)
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById("projectModal");
+                if (modal.style.display === "flex") {
+                    closeProject();
+                }
+            }
+        });
+
+        // Service Modal Functions
+function openServiceModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeServiceModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function openConsultation() {
+    // Close any open service modal first
+    document.querySelectorAll('.project-modal').forEach(modal => {
+        if (modal.id !== 'consultationModal') {
+            modal.style.display = 'none';
+        }
+    });
+    document.getElementById('consultationModal').style.display = 'flex';
+}
+
+function closeConsultationModal() {
+    document.getElementById('consultationModal').style.display = 'none';
+}
+
+function submitConsultationForm() {
+    alert('Thank you! Our team will contact you within 24 hours.');
+    closeConsultationModal();
+}
+
+// Update the existing window.onclick to handle all modals
+window.onclick = function(e) {
+    const modals = document.querySelectorAll('.project-modal');
+    modals.forEach(modal => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Update ESC key handler
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const modals = document.querySelectorAll('.project-modal');
+        modals.forEach(modal => {
+            if (modal.style.display === 'flex') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
     }
-  </script>
+});
+    </script>
 </body>
+
 </html>
