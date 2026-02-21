@@ -446,159 +446,161 @@
             display: block;
             transition: var(--transition);
         }
-/* Interactive Services Styles */
-.service-card {
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
 
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, transparent 0%, rgba(198, 164, 92, 0.1) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
+        /* Interactive Services Styles */
+        .service-card {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
 
-.service-card:hover::before {
-    opacity: 1;
-}
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(198, 164, 92, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
 
-.service-card i {
-    transition: transform 0.3s ease;
-}
+        .service-card:hover::before {
+            opacity: 1;
+        }
 
-.service-card:hover i {
-    transform: scale(1.1);
-}
+        .service-card i {
+            transition: transform 0.3s ease;
+        }
 
-.service-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--gold);
-    color: var(--charcoal);
-    padding: 0.3rem 0.8rem;
-    font-size: 0.7rem;
-    border-radius: 20px;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-}
+        .service-card:hover i {
+            transform: scale(1.1);
+        }
 
-.service-card:hover .service-badge {
-    opacity: 1;
-    transform: translateY(0);
-}
+        .service-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 0.3rem 0.8rem;
+            font-size: 0.7rem;
+            border-radius: 20px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
 
-/* Service Modal Specific */
-.service-modal-content {
-    max-width: 1000px;
-    max-height: 85vh;
-    overflow-y: auto;
-}
+        .service-card:hover .service-badge {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
+        /* Service Modal Specific */
+        .service-modal-content {
+            max-width: 1000px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
 
-.service-feature {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(198, 164, 92, 0.05);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
 
-.service-feature:hover {
-    transform: translateX(5px);
-    background: rgba(198, 164, 92, 0.1);
-}
+        .service-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(198, 164, 92, 0.05);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
 
-.service-feature i {
-    font-size: 1.5rem;
-    color: var(--gold);
-}
+        .service-feature:hover {
+            transform: translateX(5px);
+            background: rgba(198, 164, 92, 0.1);
+        }
 
-.price-tag {
-    display: inline-block;
-    background: var(--charcoal);
-    color: var(--gold);
-    padding: 0.3rem 1rem;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    margin-top: 0.5rem;
-}
+        .service-feature i {
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
 
-.testimonial-card {
-    background: var(--light-cream);
-    padding: 1.5rem;
-    border-left: 4px solid var(--gold);
-    margin: 1rem 0;
-    font-style: italic;
-}
+        .price-tag {
+            display: inline-block;
+            background: var(--charcoal);
+            color: var(--gold);
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
 
-.client-name {
-    color: var(--gold);
-    font-weight: 600;
-    margin-top: 0.5rem;
-}
+        .testimonial-card {
+            background: var(--light-cream);
+            padding: 1.5rem;
+            border-left: 4px solid var(--gold);
+            margin: 1rem 0;
+            font-style: italic;
+        }
 
-.gallery-preview {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    margin: 1rem 0;
-}
+        .client-name {
+            color: var(--gold);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
 
-.gallery-preview img {
-    width: 100%;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
+        .gallery-preview {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
 
-.gallery-preview img:hover {
-    opacity: 0.8;
-}
+        .gallery-preview img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
 
-.consultation-cta {
-    background: linear-gradient(135deg, var(--charcoal), var(--dark-charcoal));
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 8px;
-    margin-top: 2rem;
-}
+        .gallery-preview img:hover {
+            opacity: 0.8;
+        }
 
-.consultation-cta h4 {
-    color: var(--gold);
-    margin-bottom: 1rem;
-}
+        .consultation-cta {
+            background: linear-gradient(135deg, var(--charcoal), var(--dark-charcoal));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
 
-.consultation-cta .cta-btn {
-    background: transparent;
-    color: var(--gold);
-    border-color: var(--gold);
-}
+        .consultation-cta h4 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
 
-.consultation-cta .cta-btn:hover {
-    background: var(--gold);
-    color: var(--charcoal);
-}
+        .consultation-cta .cta-btn {
+            background: transparent;
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .consultation-cta .cta-btn:hover {
+            background: var(--gold);
+            color: var(--charcoal);
+        }
+
         .footer-col a:hover {
             color: var(--gold);
             padding-left: 5px;
@@ -822,35 +824,37 @@
         <div class="section-container">
             <h2 id="SERVICES">Our Services</h2>
             <div class="services-grid">
-    <!-- Custom Furniture Card -->
-    <div class="service-card" onclick="openServiceModal('furnitureModal')">
-        <div class="service-badge">BESPOKE</div>
-        <i class="fas fa-couch"></i>
-        <h3>Custom furniture</h3>
-        <p>Bespoke pieces made by master artisans.</p>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
-            <div style="height: 1px; width: 30px; background: var(--gold);"></div>
-            <span style="color: var(--gold); font-size: 0.8rem;">ARTISAN</span>
-            <div style="height: 1px; width: 30px; background: var(--gold);"></div>
-        </div>
-        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--gold);">Click to explore →</p>
-    </div>
+                <!-- Custom Furniture Card -->
+                <div class="service-card" onclick="openServiceModal('furnitureModal')">
+                    <div class="service-badge">BESPOKE</div>
+                    <i class="fas fa-couch"></i>
+                    <h3>Custom furniture</h3>
+                    <p>Bespoke pieces made by master artisans.</p>
+                    <div
+                        style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
+                        <div style="height: 1px; width: 30px; background: var(--gold);"></div>
+                        <span style="color: var(--gold); font-size: 0.8rem;">ARTISAN</span>
+                        <div style="height: 1px; width: 30px; background: var(--gold);"></div>
+                    </div>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--gold);">Click to explore →</p>
+                </div>
 
-    <!-- Interior Design Card -->
-    <div class="service-card" onclick="openServiceModal('interiorModal')">
-        <div class="service-badge">FULL-SERVICE</div>
-        <i class="fas fa-pencil-ruler"></i>
-        <h3>Interior design</h3>
-        <p>Full-service spatial design & concept.</p>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
-            <div style="height: 1px; width: 30px; background: var(--gold);"></div>
-            <span style="color: var(--gold); font-size: 0.8rem;">TURNKEY</span>
-            <div style="height: 1px; width: 30px; background: var(--gold);"></div>
-        </div>
-        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--gold);">Click to explore →</p>
-    </div>
+                <!-- Interior Design Card -->
+                <div class="service-card" onclick="openServiceModal('interiorModal')">
+                    <div class="service-badge">FULL-SERVICE</div>
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>Interior design</h3>
+                    <p>Full-service spatial design & concept.</p>
+                    <div
+                        style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
+                        <div style="height: 1px; width: 30px; background: var(--gold);"></div>
+                        <span style="color: var(--gold); font-size: 0.8rem;">TURNKEY</span>
+                        <div style="height: 1px; width: 30px; background: var(--gold);"></div>
+                    </div>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--gold);">Click to explore →</p>
+                </div>
 
-    
+
     </section>
 
     <!-- Featured projects: fixed grid & images -->
@@ -890,7 +894,7 @@
                 <div class="benefits-list">
                     <div class="benefit-item"><i class="fas fa-medal"></i>
                         <div>
-                            <h4>20+ years</h4>
+                            <h4>5+ years</h4>
                             <p>Collective expertise in luxury interiors</p>
                         </div>
                     </div>
@@ -924,9 +928,7 @@
             </div>
         </div>
     </section>
-
     <!-- VIDEO + PICTURE WORKS -->
-
     <section>
         <div id="STUDIO" class="section-container">
             <div class="media-works">
@@ -956,309 +958,387 @@
                     </div>
                     <p style="margin-top:1rem; color:var(--text-soft);">Marriage hall walkthrough</p>
                 </div>
+                <!-- SUCCESS STORIES WITH METRICS -->
+                <div class="media-card" style="grid-column: span 2; width: 100%; padding: 2rem;">
+                    <h3><i class="fas fa-chart-line"></i> Client Success Stories</h3>
 
-               <div class="media-card" style="grid-column: span 2; width: 100%; padding: 2rem;">
-    <h3><i class="fas fa-camera-retro"></i> Realised works</h3>
-    
-    <div style="overflow-x: auto; white-space: nowrap; margin-top: 2rem;">
-        <div style="display: inline-flex; gap: 1.5rem;">
-            <!-- Card with video -->
-            <div style="width: 400px; height: 300px; border-radius: 16px; overflow: hidden; position: relative;">
-                <video loop muted autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;">
-                    <source src="https://dl.dropboxusercontent.com/scl/fi/lgh93z4mleh6tax03ggye/devrana-siwan-clip.mp4?rlkey=uypqal0ujh3bbe7ge31650g3h&st=zd5hygtg&dl=1" type="video/mp4">
-                </video>
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, black); padding: 1.5rem;">
-                    <p style="color: white; font-weight: 600;">Devrana Siwan Project</p>
-                </div>
-            </div>
-            
-            <div style="width: 400px; height: 300px; border-radius: 16px; overflow: hidden; position: relative;">
-                <video loop muted autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;">
-                    <source src="https://dl.dropboxusercontent.com/scl/fi/2vm8jql5idw85hb235jw2/marriage-hall-Clip-1.mp4?rlkey=vxm1pl1x2rqoii709bwt4wd4n&st=fgpajq4l&dl=1" type="video/mp4">
-                </video>
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, black); padding: 1.5rem;">
-                    <p style="color: white; font-weight: 600;">Marriage Hall</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+
+                        <!-- Story with Numbers -->
+                        <div style="background: white; padding: 2rem; border-radius: 16px;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <h4 style="margin: 0;">The Oberoi Residence</h4>
+                                <span
+                                    style="background: var(--gold); color: var(--charcoal); padding: 0.3rem 1rem; border-radius: 20px;">Completed</span>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+                                <div style="text-align: center;">
+                                    <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">40%</span>
+                                    <p style="color: var(--text-soft);">Space Optimization</p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">2.5x</span>
+                                    <p style="color: var(--text-soft);">Property Value</p>
+                                </div>
+                            </div>
+                            <p style="color: var(--text-soft);">"The redesign not only made our home beautiful but also
+                                increased its market value significantly."</p>
+                            <p style="color: var(--gold); margin-top: 1rem;">— Rajiv Oberoi</p>
+                        </div>
+
+                        <!-- Story with Numbers -->
+                        <div style="background: white; padding: 2rem; border-radius: 16px;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <h4 style="margin: 0;">TechHub Office</h4>
+                                <span
+                                    style="background: var(--gold); color: var(--charcoal); padding: 0.3rem 1rem; border-radius: 20px;">Completed</span>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+                                <div style="text-align: center;">
+                                    <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">60%</span>
+                                    <p style="color: var(--text-soft);">Productivity Boost</p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <span style="font-size: 2rem; font-weight: 700; color: var(--gold);">100+</span>
+                                    <p style="color: var(--text-soft);">Happy Employees</p>
+                                </div>
+                            </div>
+                            <p style="color: var(--text-soft);">"The new office design has transformed our work culture.
+                                Employees love coming to work!"</p>
+                            <p style="color: var(--gold); margin-top: 1rem;">— Kiran Majumdar</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-                </div>
-            </div>
+        </div>
+        </div>
+        </div>
         </div>
     </section>
-<!-- SERVICES MODALS -->
+    <!-- SERVICES MODALS -->
 
-<!-- Custom Furniture Modal -->
-<div id="furnitureModal" class="project-modal">
-    <div class="modal-content service-modal-content">
-        <span class="close-btn" onclick="closeServiceModal('furnitureModal')">&times;</span>
-        
-        <!-- Hero Section -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-            <div>
-                <h2 class="modal-title" style="border-bottom: none;">Custom Furniture</h2>
-                <p style="font-size: 1.2rem; color: var(--gold); margin: 1rem 0;">Bespoke pieces made by master artisans</p>
-                <p>Each piece is individually crafted in our workshop using time-honored techniques and the finest materials. From concept to completion, we work closely with you to create furniture that tells your story.</p>
-                <div class="price-tag">Starting at ₹50,000 • 8-12 weeks</div>
-            </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1618220048045-10fe3ab15483?w=600" alt="Custom furniture" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-            </div>
-        </div>
-        
-        <!-- Features Grid -->
-        <h3 style="margin: 2rem 0 1rem;">What We Offer</h3>
-        <div class="service-grid">
-            <div class="service-feature">
-                <i class="fas fa-tree"></i>
+    <!-- Custom Furniture Modal -->
+    <div id="furnitureModal" class="project-modal">
+        <div class="modal-content service-modal-content">
+            <span class="close-btn" onclick="closeServiceModal('furnitureModal')">&times;</span>
+
+            <!-- Hero Section -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                 <div>
-                    <h4>Premium Materials</h4>
-                    <p>Solid walnut, teak, oak • Italian marble • Brass & bronze</p>
+                    <h2 class="modal-title" style="border-bottom: none;">Custom Furniture</h2>
+                    <p style="font-size: 1.2rem; color: var(--gold); margin: 1rem 0;">Bespoke pieces made by master
+                        artisans</p>
+                    <p>Each piece is individually crafted in our workshop using time-honored techniques and the finest
+                        materials. From concept to completion, we work closely with you to create furniture that tells
+                        your story.</p>
+                    <div class="price-tag">Starting at ₹50,000 • 8-12 weeks</div>
+                </div>
+                <div>
+                    <img src="LOGO.jpeg" alt="Custom FERNITUR"
+                        style="width: 200PX; height: 200px; object-fit: cover; border-radius:50%;margin-left: 4CM;">
                 </div>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-hands"></i>
-                <div>
-                    <h4>Hand-Carved Details</h4>
-                    <p>Traditional techniques passed down through generations</p>
+
+            <!-- Features Grid -->
+            <h3 style="margin: 2rem 0 1rem;">What We Offer</h3>
+            <div class="service-grid">
+                <div class="service-feature">
+                    <i class="fas fa-tree"></i>
+                    <div>
+                        <h4>Premium Materials</h4>
+                        <p>Solid walnut, teak, oak • Italian marble • Brass & bronze</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-hands"></i>
+                    <div>
+                        <h4>Hand-Carved Details</h4>
+                        <p>Traditional techniques passed down through generations</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-palette"></i>
+                    <div>
+                        <h4>Custom Finishes</h4>
+                        <p>Any color, any stain, any texture you imagine</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-ruler-combined"></i>
+                    <div>
+                        <h4>Bespoke Dimensions</h4>
+                        <p>Perfectly fitted to your space</p>
+                    </div>
                 </div>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-palette"></i>
+
+            <!-- Gallery Preview -->
+            <h3 style="margin: 2rem 0 1rem;">Recent Creations</h3>
+            <div class="gallery-preview">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400" alt="Sofa">
+                <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=400" alt="Dining table">
+                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=400" alt="Cabinet">
+                <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=400" alt="Bed">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Chair">
+                <img src="https://images.unsplash.com/photo-1617104551722-3b2d513664dd?w=400" alt="Desk">
+            </div>
+
+            <!-- Testimonial -->
+            <div class="testimonial-card">
+                <p>"Aashira Interyoz created a custom dining table that is the centerpiece of our home. The
+                    craftsmanship is exceptional and it will be passed down for generations."</p>
+                <div class="client-name">— Priya Sharma, Bengaluru</div>
+            </div>
+
+            <!-- Process -->
+            <h3 style="margin: 2rem 0 1rem;">Our Process</h3>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
                 <div>
-                    <h4>Custom Finishes</h4>
-                    <p>Any color, any stain, any texture you imagine</p>
+                    <div
+                        style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">
+                        1</div>
+                    <p style="margin-top: 0.5rem;"><strong>Consult</strong><br><small>1 hour meeting</small></p>
+                </div>
+                <div>
+                    <div
+                        style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">
+                        2</div>
+                    <p style="margin-top: 0.5rem;"><strong>Design</strong><br><small>3D renderings</small></p>
+                </div>
+                <div>
+                    <div
+                        style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">
+                        3</div>
+                    <p style="margin-top: 0.5rem;"><strong>Craft</strong><br><small>8-12 weeks</small></p>
+                </div>
+                <div>
+                    <div
+                        style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">
+                        4</div>
+                    <p style="margin-top: 0.5rem;"><strong>Deliver</strong><br><small>White glove</small></p>
                 </div>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-ruler-combined"></i>
-                <div>
-                    <h4>Bespoke Dimensions</h4>
-                    <p>Perfectly fitted to your space</p>
-                </div>
+
+            <!-- CTA -->
+            <div class="consultation-cta">
+                <h4>Ready to create something beautiful?</h4>
+                <button onclick="openConsultation()" class="cta-btn" style="cursor: pointer;">BOOK FREE
+                    CONSULTATION</button>
             </div>
-        </div>
-        
-        <!-- Gallery Preview -->
-        <h3 style="margin: 2rem 0 1rem;">Recent Creations</h3>
-        <div class="gallery-preview">
-            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400" alt="Sofa">
-            <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=400" alt="Dining table">
-            <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=400" alt="Cabinet">
-            <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=400" alt="Bed">
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Chair">
-            <img src="https://images.unsplash.com/photo-1617104551722-3b2d513664dd?w=400" alt="Desk">
-        </div>
-        
-        <!-- Testimonial -->
-        <div class="testimonial-card">
-            <p>"Aashira Interyoz created a custom dining table that is the centerpiece of our home. The craftsmanship is exceptional and it will be passed down for generations."</p>
-            <div class="client-name">— Priya Sharma, Bengaluru</div>
-        </div>
-        
-        <!-- Process -->
-        <h3 style="margin: 2rem 0 1rem;">Our Process</h3>
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
-            <div><div style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">1</div><p style="margin-top: 0.5rem;"><strong>Consult</strong><br><small>1 hour meeting</small></p></div>
-            <div><div style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">2</div><p style="margin-top: 0.5rem;"><strong>Design</strong><br><small>3D renderings</small></p></div>
-            <div><div style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">3</div><p style="margin-top: 0.5rem;"><strong>Craft</strong><br><small>8-12 weeks</small></p></div>
-            <div><div style="background: var(--gold); color: white; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto;">4</div><p style="margin-top: 0.5rem;"><strong>Deliver</strong><br><small>White glove</small></p></div>
-        </div>
-        
-        <!-- CTA -->
-        <div class="consultation-cta">
-            <h4>Ready to create something beautiful?</h4>
-            <button onclick="openConsultation()" class="cta-btn" style="cursor: pointer;">BOOK FREE CONSULTATION</button>
         </div>
     </div>
-</div>
 
-<!-- Interior Design Modal -->
-<div id="interiorModal" class="project-modal">
-    <div class="modal-content service-modal-content">
-        <span class="close-btn" onclick="closeServiceModal('interiorModal')">&times;</span>
-        
-        <!-- Hero Section -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-            <div>
-                <h2 class="modal-title" style="border-bottom: none;">Interior Design</h2>
-                <p style="font-size: 1.2rem; color: var(--gold); margin: 1rem 0;">Full-service spatial design & concept</p>
-                <p>We transform spaces into experiences. From initial concept to final installation, our team handles every detail to create interiors that reflect your personality and lifestyle.</p>
-                <div class="price-tag">Custom quotes • Residential & Commercial</div>
-            </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1618219944342-745e233d486c?w=600" alt="Interior design" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-            </div>
-        </div>
-        
-        <!-- Services List -->
-        <h3 style="margin: 2rem 0 1rem;">Our Design Services</h3>
-        <div class="service-grid">
-            <div class="service-feature">
-                <i class="fas fa-home"></i>
+    <!-- Interior Design Modal -->
+    <div id="interiorModal" class="project-modal">
+        <div class="modal-content service-modal-content">
+            <span class="close-btn" onclick="closeServiceModal('interiorModal')">&times;</span>
+
+            <!-- Hero Section -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                 <div>
-                    <h4>Residential Design</h4>
-                    <p>Homes, apartments, villas</p>
+                    <h2 class="modal-title" style="border-bottom: none;">Interior Design</h2>
+                    <p style="font-size: 1.2rem; color: var(--gold); margin: 1rem 0;">Full-service spatial design &
+                        concept</p>
+                    <p>We transform spaces into experiences. From initial concept to final installation, our team
+                        handles every detail to create interiors that reflect your personality and lifestyle.</p>
+                    <div class="price-tag">Custom quotes • Residential & Commercial</div>
+                </div>
+                <div>
+                     <img src="LOGO.jpeg" alt="Custom FERNITUR"
+                        style="width: 200PX; height: 200px; object-fit: cover; border-radius:50%;margin-left: 4CM;">
                 </div>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-building"></i>
-                <div>
-                    <h4>Commercial Spaces</h4>
-                    <p>Offices, restaurants, hotels</p>
+
+            <!-- Services List -->
+            <h3 style="margin: 2rem 0 1rem;">Our Design Services</h3>
+            <div class="service-grid">
+                <div class="service-feature">
+                    <i class="fas fa-home"></i>
+                    <div>
+                        <h4>Residential Design</h4>
+                        <p>Homes, apartments, villas</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-building"></i>
+                    <div>
+                        <h4>Commercial Spaces</h4>
+                        <p>Offices, restaurants, hotels</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-draw-polygon"></i>
+                    <div>
+                        <h4>Space Planning</h4>
+                        <p>Optimal layout & flow</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-swatchbook"></i>
+                    <div>
+                        <h4>Material Selection</h4>
+                        <p>Finishes, fabrics, textures</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-couch"></i>
+                    <div>
+                        <h4>Furniture Sourcing</h4>
+                        <p>Custom & curated pieces</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-paint-roller"></i>
+                    <div>
+                        <h4>Project Management</h4>
+                        <p>End-to-end execution</p>
+                    </div>
                 </div>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-draw-polygon"></i>
-                <div>
-                    <h4>Space Planning</h4>
-                    <p>Optimal layout & flow</p>
+
+            <!-- Portfolio Preview -->
+            <h3 style="margin: 2rem 0 1rem;">Recent Projects</h3>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                <div><img src="https://images.unsplash.com/photo-1618221195710-5c1a2f6e6c8c?w=400"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;">
+                    <p style="margin-top: 0.3rem; font-size: 0.8rem;">Luxury Apartment</p>
+                </div>
+                <div><img src="https://images.unsplash.com/photo-1618219904912-fd8716c6a5b6?w=400"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;">
+                    <p style="margin-top: 0.3rem; font-size: 0.8rem;">Modern Office</p>
+                </div>
+                <div><img src="https://images.unsplash.com/photo-1618221381711-42ca8ab6e908?w=400"
+                        style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;">
+                    <p style="margin-top: 0.3rem; font-size: 0.8rem;">Restaurant</p>
                 </div>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-swatchbook"></i>
-                <div>
-                    <h4>Material Selection</h4>
-                    <p>Finishes, fabrics, textures</p>
-                </div>
+
+            <!-- Testimonial -->
+            <div class="testimonial-card" style="margin: 2rem 0;">
+                <p>"They understood our vision perfectly and delivered beyond our expectations. Every detail was
+                    considered and executed beautifully."</p>
+                <div class="client-name">— Rajesh Mehta, Mumbai</div>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-couch"></i>
-                <div>
-                    <h4>Furniture Sourcing</h4>
-                    <p>Custom & curated pieces</p>
-                </div>
+
+            <!-- CTA -->
+            <div class="consultation-cta">
+                <h4>Ready to transform your space?</h4>
+                <button onclick="openConsultation()" class="cta-btn" style="cursor: pointer;">SCHEDULE A DESIGN
+                    CALL</button>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-paint-roller"></i>
-                <div>
-                    <h4>Project Management</h4>
-                    <p>End-to-end execution</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Portfolio Preview -->
-        <h3 style="margin: 2rem 0 1rem;">Recent Projects</h3>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
-            <div><img src="https://images.unsplash.com/photo-1618221195710-5c1a2f6e6c8c?w=400" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;"><p style="margin-top: 0.3rem; font-size: 0.8rem;">Luxury Apartment</p></div>
-            <div><img src="https://images.unsplash.com/photo-1618219904912-fd8716c6a5b6?w=400" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;"><p style="margin-top: 0.3rem; font-size: 0.8rem;">Modern Office</p></div>
-            <div><img src="https://images.unsplash.com/photo-1618221381711-42ca8ab6e908?w=400" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;"><p style="margin-top: 0.3rem; font-size: 0.8rem;">Restaurant</p></div>
-        </div>
-        
-        <!-- Testimonial -->
-        <div class="testimonial-card" style="margin: 2rem 0;">
-            <p>"They understood our vision perfectly and delivered beyond our expectations. Every detail was considered and executed beautifully."</p>
-            <div class="client-name">— Rajesh Mehta, Mumbai</div>
-        </div>
-        
-        <!-- CTA -->
-        <div class="consultation-cta">
-            <h4>Ready to transform your space?</h4>
-            <button onclick="openConsultation()" class="cta-btn" style="cursor: pointer;">SCHEDULE A DESIGN CALL</button>
         </div>
     </div>
-</div>
 
-<!-- Lighting Design Modal -->
-<div id="lightingModal" class="project-modal">
-    <div class="modal-content service-modal-content">
-        <span class="close-btn" onclick="closeServiceModal('lightingModal')">&times;</span>
-        
-        <!-- Hero Section -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-            <div>
-                <h2 class="modal-title" style="border-bottom: none;">Lighting Design</h2>
-                <p style="font-size: 1.2rem; color: var(--gold); margin: 1rem 0;">Atmospheres crafted with light</p>
-                <p>Lighting is the soul of a space. We design layered lighting schemes that transform moods, highlight architecture, and create unforgettable experiences.</p>
-                <div class="price-tag">Consultation based • Commercial & Residential</div>
-            </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1586201375761-5f8e9c3e4f9d?w=600" alt="Lighting design" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-            </div>
-        </div>
-        
-        <!-- Services Grid -->
-        <h3 style="margin: 2rem 0 1rem;">Lighting Solutions</h3>
-        <div class="service-grid">
-            <div class="service-feature">
-                <i class="fas fa-sun"></i>
+    <!-- Lighting Design Modal -->
+    <div id="lightingModal" class="project-modal">
+        <div class="modal-content service-modal-content">
+            <span class="close-btn" onclick="closeServiceModal('lightingModal')">&times;</span>
+
+            <!-- Hero Section -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                 <div>
-                    <h4>Natural Light</h4>
-                    <p>Optimizing daylight</p>
+                    <h2 class="modal-title" style="border-bottom: none;">Lighting Design</h2>
+                    <p style="font-size: 1.2rem; color: var(--gold); margin: 1rem 0;">Atmospheres crafted with light</p>
+                    <p>Lighting is the soul of a space. We design layered lighting schemes that transform moods,
+                        highlight architecture, and create unforgettable experiences.</p>
+                    <div class="price-tag">Consultation based • Commercial & Residential</div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1586201375761-5f8e9c3e4f9d?w=600" alt="Lighting design"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
                 </div>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-lightbulb"></i>
-                <div>
-                    <h4>Ambient Lighting</h4>
-                    <p>Overall illumination</p>
+
+            <!-- Services Grid -->
+            <h3 style="margin: 2rem 0 1rem;">Lighting Solutions</h3>
+            <div class="service-grid">
+                <div class="service-feature">
+                    <i class="fas fa-sun"></i>
+                    <div>
+                        <h4>Natural Light</h4>
+                        <p>Optimizing daylight</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <h4>Ambient Lighting</h4>
+                        <p>Overall illumination</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <h4>Accent Lighting</h4>
+                        <p>Highlighting features</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-moon"></i>
+                    <div>
+                        <h4>Mood Lighting</h4>
+                        <p>Smart & dimmable systems</p>
+                    </div>
                 </div>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-star"></i>
-                <div>
-                    <h4>Accent Lighting</h4>
-                    <p>Highlighting features</p>
-                </div>
+
+            <!-- Testimonial -->
+            <div class="testimonial-card">
+                <p>"The lighting design completely transformed our gallery space. Art pieces come alive and the ambiance
+                    is perfect."</p>
+                <div class="client-name">— Art Gallery, Delhi</div>
             </div>
-            <div class="service-feature">
-                <i class="fas fa-moon"></i>
-                <div>
-                    <h4>Mood Lighting</h4>
-                    <p>Smart & dimmable systems</p>
-                </div>
+
+            <!-- CTA -->
+            <div class="consultation-cta">
+                <h4>Let there be light (the right kind)</h4>
+                <button onclick="openConsultation()" class="cta-btn" style="cursor: pointer;">LIGHTING
+                    CONSULTATION</button>
             </div>
-        </div>
-        
-        <!-- Testimonial -->
-        <div class="testimonial-card">
-            <p>"The lighting design completely transformed our gallery space. Art pieces come alive and the ambiance is perfect."</p>
-            <div class="client-name">— Art Gallery, Delhi</div>
-        </div>
-        
-        <!-- CTA -->
-        <div class="consultation-cta">
-            <h4>Let there be light (the right kind)</h4>
-            <button onclick="openConsultation()" class="cta-btn" style="cursor: pointer;">LIGHTING CONSULTATION</button>
         </div>
     </div>
-</div>
 
-<!-- Consultation Form Modal (reused from earlier) -->
-<div id="consultationModal" class="project-modal">
-    <div class="modal-content" style="max-width: 600px;">
-        <span class="close-btn" onclick="closeConsultationModal()">&times;</span>
-        <h2 class="modal-title">Book Your Consultation</h2>
-        <p style="margin-bottom: 2rem;">Free 30-minute consultation with our design team.</p>
-        
-        <form id="consultationForm" onsubmit="event.preventDefault(); submitConsultationForm();">
-            <div style="margin-bottom: 1rem;">
-                <input type="text" placeholder="Your Name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
-            </div>
-            <div style="margin-bottom: 1rem;">
-                <input type="email" placeholder="Email Address" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
-            </div>
-            <div style="margin-bottom: 1rem;">
-                <input type="tel" placeholder="Phone Number" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
-            </div>
-            <div style="margin-bottom: 1rem;">
-                <select style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
-                    <option>I'm interested in...</option>
-                    <option>Custom Furniture</option>
-                    <option>Interior Design</option>
-                    <option>Lighting Design</option>
-                    <option>Multiple Services</option>
-                </select>
-            </div>
-            <div style="margin-bottom: 1rem;">
-                <textarea placeholder="Tell us about your project" rows="3" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;"></textarea>
-            </div>
-            <button type="submit" class="cta-btn" style="width: 100%; border: none; cursor: pointer;">REQUEST CALLBACK</button>
-        </form>
+    <!-- Consultation Form Modal (reused from earlier) -->
+    <div id="consultationModal" class="project-modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <span class="close-btn" onclick="closeConsultationModal()">&times;</span>
+            <h2 class="modal-title">Book Your Consultation</h2>
+            <p style="margin-bottom: 2rem;">Free 30-minute consultation with our design team.</p>
+
+            <form id="consultationForm" onsubmit="event.preventDefault(); submitConsultationForm();">
+                <div style="margin-bottom: 1rem;">
+                    <input type="text" placeholder="Your Name" required
+                        style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <input type="email" placeholder="Email Address" required
+                        style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <input type="tel" placeholder="Phone Number"
+                        style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <select style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;">
+                        <option>I'm interested in...</option>
+                        <option>Custom Furniture</option>
+                        <option>Interior Design</option>
+                        <option>Lighting Design</option>
+                        <option>Multiple Services</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <textarea placeholder="Tell us about your project" rows="3"
+                        style="width: 100%; padding: 0.8rem; border: 1px solid #ddd;"></textarea>
+                </div>
+                <button type="submit" class="cta-btn" style="width: 100%; border: none; cursor: pointer;">REQUEST
+                    CALLBACK</button>
+            </form>
+        </div>
     </div>
-</div>
     <footer class="contact-footer" id="Contact">
         <div class="section-container">
             <div class="footer-grid">
@@ -1294,7 +1374,7 @@
                 <p>© 2026 AASHIRAINTERYOZ Design — charcoal, gold & cream identity</p>
             </div>
         </div>
-        
+
     </footer>
 
     <script>
@@ -1416,58 +1496,58 @@
         });
 
         // Service Modal Functions
-function openServiceModal(modalId) {
-    document.getElementById(modalId).style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-
-function closeServiceModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
-function openConsultation() {
-    // Close any open service modal first
-    document.querySelectorAll('.project-modal').forEach(modal => {
-        if (modal.id !== 'consultationModal') {
-            modal.style.display = 'none';
+        function openServiceModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
-    });
-    document.getElementById('consultationModal').style.display = 'flex';
-}
 
-function closeConsultationModal() {
-    document.getElementById('consultationModal').style.display = 'none';
-}
-
-function submitConsultationForm() {
-    alert('Thank you! Our team will contact you within 24 hours.');
-    closeConsultationModal();
-}
-
-// Update the existing window.onclick to handle all modals
-window.onclick = function(e) {
-    const modals = document.querySelectorAll('.project-modal');
-    modals.forEach(modal => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
+        function closeServiceModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
             document.body.style.overflow = 'auto';
         }
-    });
-}
 
-// Update ESC key handler
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        const modals = document.querySelectorAll('.project-modal');
-        modals.forEach(modal => {
-            if (modal.style.display === 'flex') {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
+        function openConsultation() {
+            // Close any open service modal first
+            document.querySelectorAll('.project-modal').forEach(modal => {
+                if (modal.id !== 'consultationModal') {
+                    modal.style.display = 'none';
+                }
+            });
+            document.getElementById('consultationModal').style.display = 'flex';
+        }
+
+        function closeConsultationModal() {
+            document.getElementById('consultationModal').style.display = 'none';
+        }
+
+        function submitConsultationForm() {
+            alert('Thank you! Our team will contact you within 24 hours.');
+            closeConsultationModal();
+        }
+
+        // Update the existing window.onclick to handle all modals
+        window.onclick = function (e) {
+            const modals = document.querySelectorAll('.project-modal');
+            modals.forEach(modal => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Update ESC key handler
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                const modals = document.querySelectorAll('.project-modal');
+                modals.forEach(modal => {
+                    if (modal.style.display === 'flex') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
             }
         });
-    }
-});
     </script>
 </body>
 
